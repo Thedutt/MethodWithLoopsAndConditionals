@@ -14,9 +14,13 @@ namespace MethodsWithLoopsAndConditionals
             SkipNumCounter();
             
             Console.WriteLine(AreNumbersSame(1, 2));
-            Console.WriteLine(AreNumEvenOrOdd(4));
+            AreNumEvenOrOdd(4);
             Console.WriteLine(PosOrNeg(-143));
 
+            Console.WriteLine("How old is the potential voter?");
+            var userInput = Console.ReadLine();
+            var age = int.Parse(userInput);
+            OfVotingAge(age);
         }
 
         public static void NumCounter()
@@ -37,6 +41,20 @@ namespace MethodsWithLoopsAndConditionals
         }
 
 
+        public static bool OfVotingAge(int age)
+        {
+            if (age>=18)
+            {
+                Console.WriteLine("Yes you can vote");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("No they are too young");
+                return false;
+            }
+
+        }
         public static bool AreNumbersSame(int a,int b)
         {
             if (a == b)
